@@ -1,0 +1,178 @@
+/* Reset body margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/illustration-geometric-shapes-with-neon-laser-lights-great-backgrounds-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Full-screen flexbox centering */
+.full-screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    z-index: 1;
+}
+
+/* Universal white text color */
+body, h1, h2, h3, h4, h5, h6, p, a, .btn, .display-4 {
+    color: white !important;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-custom {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    }
+}
+
+.button-custom:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00FFFF;
+}
+
+.button-custom::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.5), rgba(255, 0, 150, 0.5));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.button-custom:hover::after {
+    opacity: 1;
+}
+
+/* Orbitron font styling with glow */
+.orbitron-heading {
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Logo positioning */
+.top-left-logo, .top-right-logo {
+    position: fixed;
+    border-radius: 50%;
+    top: 10px;
+    width: 120px;
+    height: 120px;
+    z-index: 1000;
+}
+
+.top-left-logo {
+    left: 10px;
+}
+
+.top-right-logo {
+    right: 10px;
+}
+
+/* Additional text styling */
+h1, h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Button layout adjustments */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.instructions h3 {
+    font-size: 18px;
+    color: #34495e;
+    margin: 15px 0;
+    line-height: 1.6;
+    padding-left: 20px;
+    border-left: 4px solid #3498db;
+}
+
+.instructions h3::before {
+    content: "✔";
+    color: #3498db;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+/* Table Styling for White Text with Glow */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+td:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00FFFF;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}

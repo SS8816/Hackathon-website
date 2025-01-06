@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CODE CRUNCH: Model Building Hackathon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Left logo -->
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Left Logo" class="top-left-logo">
+
+    <!-- Right logo -->
+    <img src="{{ url_for('static', filename='images/sppp.jpg') }}" alt="Right Logo" class="top-right-logo">
+
+    <div class="container mt-5 text-center">
+        <h1 class="display-4 orbitron-heading">CODE CRUNCH: Model Building Hackathon</h1>
+
+        <div class="button-container mt-5">
+            <!-- Button for Prediction and Target Submission -->
+            <a href="{{ url_for('submit_predictions') }}" class="btn btn-primary btn-lg mx-2 button-custom">Submit Your Prediction</a>
+
+            <!-- Button for Judge Score Submission -->
+            <a href="{{ url_for('submit_judge_scores') }}" class="btn btn-warning btn-lg mx-2 button-custom">Judge Scores</a>
+        </div>
+
+        <!-- Leaderboard Button -->
+        <div class="button-container mt-3">
+            <a href="{{ url_for('leaderboard') }}" class="btn btn-success btn-lg button-custom">Leaderboard</a>
+        </div>
+
+        <!-- Add a button or link to the instructions page -->
+        <div class="button-container mt-3">
+            <a href="{{ url_for('instructions') }}" class="btn btn-info btn-lg button-custom">Hackathon Instructions</a>
+        </div>
+    </div>
+</body>
+</html>

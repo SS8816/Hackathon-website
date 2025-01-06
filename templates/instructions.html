@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hackathon Instructions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<!-- Left logo -->
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Left Logo" class="top-left-logo">
+
+<!-- Right logo -->
+    <img src="{{ url_for('static', filename='images/sppp.jpg') }}" alt="Right Logo" class="top-right-logo">
+
+
+    <div class="container mt-5">
+        <h1 class="display-4 text-center">Hackathon Instructions</h1>
+
+        <div class="instructions">
+            <br></br>
+            <h3>1. Register your team before the hackathon begins.</h3>
+            <h3>2. Submit your model predictions along with the target values.</h3>
+            <h3>3. Ensure that your data is formatted correctly for evaluation.</h3>
+            <h3>4. Scores will be assigned based on presentation and accuracy.</h3>
+            <h3>5. Ensure the timely submission of your project within the allotted time.</h3>
+            <h3>6. Follow all ethical guidelines and data privacy rules during the competition.</h3>
+            <h3>7. After submission, review the leaderboard and await further announcements.</h3>
+        </div>
+
+        <!-- Back to the index page -->
+        <div class="button-container mt-3">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
